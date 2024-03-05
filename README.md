@@ -11,20 +11,23 @@ Project aims to create a Hospital Appointment App.
 **User Stories:**
 
 1. **View Doctors:**
-   Task-1 = Create a page to display the list of doctors, including their name, specialty, and available appointment hours.
-   Task-2 = Fetch doctor information from Data.js and pass it to the doctor list page.
+
+   - Task-1 = Create a page to display the list of doctors, including their name, specialty, and available appointment hours.
+   - Task-2 = Fetch doctor information from Data.js and pass it to the doctor list page.
 
 2. **View Appointments:**
-   Task-1 = Develop a page to display the selected doctor's appointment list, showing appointment date, time, and patient name.
-   Task-2 = Retrieve appointment information for the selected doctor from Data.js and display it on the appointment list page.
+
+   - Task-1 = Develop a page to display the selected doctor's appointment list, showing appointment date, time, and patient name.
+   - Task-2 = Retrieve appointment information for the selected doctor from Data.js and display it on the appointment list page.
 
 3. **Add Patient:**
-   Task-1 = Design a form page to add a new patient to a selected doctor's appointments, with fields for patient name, date, and time selection.
-   Task-2 = Generate a new appointment using the information from the add patient form and add it to the appointment list of the selected doctor.
+
+   - Task-1 = Design a form page to add a new patient to a selected doctor's appointments, with fields for patient name, date, and time selection.
+   - Task-2 = Generate a new appointment using the information from the add patient form and add it to the appointment list of the selected doctor.
 
 4. **Data Management:**
-   Task-1 = Develop functions to update data, such as adding a new appointment, and set up functions to access Data.js and local storage.
-   Task-2 = Implement functions to update both Data.js and local storage when a new appointment is added.
+   - Task-1 = Develop functions to update data, such as adding a new appointment, and set up functions to access Data.js and local storage.
+   - Task-2 = Implement functions to update both Data.js and local storage when a new appointment is added.
 
 **Additional Requirement:**
 

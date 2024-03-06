@@ -36,10 +36,11 @@
   max-width: 2500px;
   margin: auto;
   height: auto;
+  width: 92%;
 }
 
 .form-control {
-  height: 320px;
+  height: 350px;
   padding: 2rem;
   line-height: 1.5rem;
 }
@@ -70,8 +71,8 @@
   width: 660px;
   margin: auto;
   max-width: 2850px;
-  height: auto;
-  max-height: 620px;
+  height: 350px;
+  max-height: 350px;
   overflow: auto;
 }
 
@@ -96,6 +97,7 @@
 
 #reason {
   font-size: smaller !important;
+  width: 300px;
 }
 
 @media only screen and (max-width: 768px) {

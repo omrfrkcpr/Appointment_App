@@ -19,12 +19,17 @@ const AddPatient = ({
   // Toggle appointment status
   const handleIsCompleted = (id) => {
     targetSetData((prevData) => {
-      return prevData.map((patient) => {
-        if (patient.id === id) {
-          return { ...patient, isCompleted: !patient.isCompleted };
+      const updatedData = prevData.map((appointment) => {
+        if (appointment.id === id) {
+          return { ...appointment, isCompleted: !appointment.isCompleted };
         }
-        return patient;
+        return appointment;
       });
+
+      // Update local storage
+      localStorage.setItem("appointments", JSON.stringify(updatedData));
+
+      return updatedData;
     });
   };
 
@@ -34,10 +39,19 @@ const AddPatient = ({
       window.confirm(
         `${patient}'s Appointment will be permanently deleted. Are you sure?`
       )
-    )
-      targetSetData((prevData) =>
-        prevData.filter((patient) => patient.id !== id)
-      );
+    ) {
+      targetSetData((prevData) => {
+        // Filtreleme işlemi ile silinecek randevuyu hariç tut
+        const updatedData = prevData.filter(
+          (appointment) => appointment.id !== id
+        );
+
+        // Update local storage
+        localStorage.setItem("appointments", JSON.stringify(updatedData));
+
+        return updatedData;
+      });
+    }
   };
 
   const toggleTextDecoration = (isCompleted) => {
@@ -93,6 +107,16 @@ const AddPatient = ({
         reason: reason,
       };
 
+      // // Update state with the new appointment
+      // targetSetData((prevData) => {
+      //   const updatedData = [...prevData, newAppointment];
+
+      //   // Update local storage
+      //   localStorage.setItem("appointments", JSON.stringify(updatedData));
+
+      //   return updatedData;
+      // });
+      // }
       // Add the new appointment to the data
       targetSetData((prevData) => [...prevData, newAppointment]);
     }
@@ -137,7 +161,7 @@ const AddPatient = ({
       <h4 className="mt-5 mb-4 text-center border-bottom mx-3 p-2 w-50 mx-auto">
         All Appointments of {doctor}
       </h4>
-      <div className="appointment-management d-flex justify-content-center w-75">
+      <div className="appointment-management d-flex justify-content-center ">
         <form action="" className="form-control w-50 text-center">
           <h5 className="text-center border-bottom w-75 m-auto">
             Create a new patient appointment

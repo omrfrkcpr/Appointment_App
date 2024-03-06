@@ -7,7 +7,9 @@ import Navbar from "../components/navbar/Navbar";
 
 const Home = () => {
   const [togglePage, setTogglePage] = useState(true);
-  const [data, setData] = useState(initialData);
+  const [data, setData] = useState(
+    JSON.parse(localStorage.getItem("appointments")) || initialData
+  );
   const [doctors, setDoctors] = useState(initialDoctors);
   const [selectedDoctor, setSelectedDoctor] = useState(null);
 

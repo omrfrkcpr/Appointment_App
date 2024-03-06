@@ -7,12 +7,17 @@ const PatientList = ({ doctors, toggle, data, setData }) => {
   // Toggle appointment status
   const handleIsCompleted = (id) => {
     setData((prevData) => {
-      return prevData.map((patient) => {
-        if (patient.id === id) {
-          return { ...patient, isCompleted: !patient.isCompleted };
+      const updatedData = prevData.map((appointment) => {
+        if (appointment.id === id) {
+          return { ...appointment, isCompleted: !appointment.isCompleted };
         }
-        return patient;
+        return appointment;
       });
+
+      // Local Storage güncelleme
+      localStorage.setItem("appointments", JSON.stringify(updatedData));
+
+      return updatedData;
     });
   };
 
@@ -22,8 +27,19 @@ const PatientList = ({ doctors, toggle, data, setData }) => {
       window.confirm(
         `${patient}'s Appointment will be permanently deleted. Are you sure?`
       )
-    )
-      setData((prevData) => prevData.filter((patient) => patient.id !== id));
+    ) {
+      setData((prevData) => {
+        // Filtreleme işlemi ile silinecek randevuyu hariç tut
+        const updatedData = prevData.filter(
+          (appointment) => appointment.id !== id
+        );
+
+        // Local Storage güncelleme
+        localStorage.setItem("appointments", JSON.stringify(updatedData));
+
+        return updatedData;
+      });
+    }
   };
 
   const toggleTextDecoration = (isCompleted) => {

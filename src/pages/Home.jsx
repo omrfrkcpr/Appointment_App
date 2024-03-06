@@ -9,16 +9,20 @@ const Home = () => {
   const [togglePage, setTogglePage] = useState(true);
   const [data, setData] = useState(initialData);
   const [doctors, setDoctors] = useState(initialDoctors);
+  const [selectedDoctor, setSelectedDoctor] = useState(null);
 
   const toggleComponent = (doctorName) => {
-    setTogglePage(!togglePage);
+    setTogglePage(false);
     const selectedDoctor = doctors.find((doc) => doc.doctor === doctorName);
-    setDoctors(selectedDoctor);
+    // setDoctors([selectedDoctor]);
+    setSelectedDoctor(selectedDoctor);
     setData(data.filter((patient) => patient.doctor === doctorName));
   };
 
   const goBack = () => {
     setTogglePage(true);
+    setDoctors(initialDoctors);
+    setData(initialData);
   };
 
   return (
@@ -35,7 +39,7 @@ const Home = () => {
         <AddPatient
           targetData={data}
           targetSetData={setData}
-          targetDoctor={doctors}
+          targetDoctor={selectedDoctor}
           toggle={toggleComponent}
           goBack={goBack}
         />

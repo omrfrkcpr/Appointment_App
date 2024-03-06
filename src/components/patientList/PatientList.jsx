@@ -50,30 +50,31 @@ const PatientList = ({ doctors, toggle, data, setData }) => {
         All Doctors
       </h4>
       <Row className="text-center cards m-auto">
-        {doctors.map((doc) => {
-          const { idDoctor, doctor, department, image } = doc;
-          return (
-            <Card style={{ width: "13rem" }} className="card" key={idDoctor}>
-              <Card.Img
-                variant="top"
-                src={image}
-                onMouseOver={(e) => handleMouseOver(e)}
-                onMouseOut={(e) => handleMouseOut(e)}
-              />
-              <Card.Body>
-                <Card.Title>{doctor}</Card.Title>
-                <Card.Text>{department}</Card.Text>
-                <Button
-                  onClick={() => toggle(doctor)}
-                  style={{ backgroundColor: "#3da4f0" }}
-                  className="btn-appointments"
-                >
-                  Appointments
-                </Button>
-              </Card.Body>
-            </Card>
-          );
-        })}
+        {doctors &&
+          doctors.map((doc) => {
+            const { idDoctor, doctor, department, image } = doc;
+            return (
+              <Card style={{ width: "13rem" }} className="card" key={idDoctor}>
+                <Card.Img
+                  variant="top"
+                  src={image}
+                  onMouseOver={(e) => handleMouseOver(e)}
+                  onMouseOut={(e) => handleMouseOut(e)}
+                />
+                <Card.Body>
+                  <Card.Title>{doctor}</Card.Title>
+                  <Card.Text>{department}</Card.Text>
+                  <Button
+                    onClick={() => toggle(doctor)}
+                    style={{ backgroundColor: "#3da4f0" }}
+                    className="btn-appointments"
+                  >
+                    Appointments
+                  </Button>
+                </Card.Body>
+              </Card>
+            );
+          })}
       </Row>
       <h4 className="mt-5 mb-4 text-center border-bottom mx-3 p-2">
         All Appointments

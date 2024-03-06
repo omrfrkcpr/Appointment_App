@@ -1,9 +1,3 @@
-.title {
-  margin: 5rem auto 0;
-  width: 95%;
-  text-align: center;
-}
-
 /* ---------------------------------- */
 /*            doctors list            */
 /* ---------------------------------- */
@@ -46,6 +40,28 @@
 /*            Appointments            */
 /* ---------------------------------- */
 
+.appointments {
+  background-color: #3da5f06e;
+  width: 95%;
+  margin: auto;
+}
+
 .buttons {
-  margin: 1rem auto 0;
+  margin: 2rem auto 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.btn-status {
+  padding: 0.5rem;
+  height: 50%;
+  font-size: 0.9rem !important;
+}
+
+.btn-update {
+  height: 50%;
+  font-size: 0.9rem !important;
 }

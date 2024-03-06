@@ -1,9 +1,10 @@
 import React from "react";
 import { Card, Button, Row } from "react-bootstrap";
-import { FaDeleteLeft } from "react-icons/fa6";
+import { TiDelete } from "react-icons/ti";
 import "./PatientList.css";
 
 const PatientList = ({ doctors, toggle, data, setData }) => {
+  // Toggle appointment status
   const handleIsCompleted = (id) => {
     setData((prevData) => {
       return prevData.map((patient) => {
@@ -15,6 +16,7 @@ const PatientList = ({ doctors, toggle, data, setData }) => {
     });
   };
 
+  // Delete appointment from database
   const handleDelete = (id, patient) => {
     if (
       window.confirm(
@@ -28,21 +30,42 @@ const PatientList = ({ doctors, toggle, data, setData }) => {
     return isCompleted ? "line-through" : "none";
   };
 
+  // doctor img mouse-over styling
+  const handleMouseOver = (e) => {
+    const eTarget = e.target.style;
+    eTarget.transform = "scale(1.04)";
+    eTarget.transitionDuration = "0.5s";
+  };
+
+  // doctor img mouse-out styling
+  const handleMouseOut = (e) => {
+    const eTarget = e.target.style;
+    eTarget.transform = "scale(1)";
+    eTarget.transitionDuration = "0.5s";
+  };
+
   return (
     <>
-      <h3 className="title">Appointment Management System (AMS)</h3>
-      <Row className="text-center m-auto cards">
+      <h4 className="mt-5 mb-4 text-center border-bottom mx-3 p-2">
+        All Doctors
+      </h4>
+      <Row className="text-center cards">
         {doctors.map((doc) => {
           const { idDoctor, doctor, department, image } = doc;
           return (
             <Card style={{ width: "13rem" }} className="card" key={idDoctor}>
-              <Card.Img variant="top" src={image} />
+              <Card.Img
+                variant="top"
+                src={image}
+                onMouseOver={(e) => handleMouseOver(e)}
+                onMouseOut={(e) => handleMouseOut(e)}
+              />
               <Card.Body>
                 <Card.Title>{doctor}</Card.Title>
                 <Card.Text>{department}</Card.Text>
                 <Button
                   onClick={toggle}
-                  variant="primary"
+                  style={{ backgroundColor: "#3da4f0" }}
                   className="btn-appointments"
                 >
                   Appointments
@@ -55,7 +78,7 @@ const PatientList = ({ doctors, toggle, data, setData }) => {
       <h4 className="mt-5 mb-4 text-center border-bottom mx-3 p-2">
         All Appointments
       </h4>
-      <Row className="appointments text-center mb-5 justify-content-center align-items-center g-3">
+      <Row className="appointments text-center mb-5 justify-content-center align-items-center g-3 pb-3">
         {data.map((patients) => {
           const { id, patient, appointment, isCompleted, doctor, reason } =
             patients;
@@ -66,7 +89,7 @@ const PatientList = ({ doctors, toggle, data, setData }) => {
                 style={{ width: "50px" }}
                 onClick={() => handleDelete(id, patient)}
               >
-                <FaDeleteLeft style={{ color: "red", width: "20px" }} />
+                <TiDelete style={{ color: "red", fontSize: "25px" }} />
               </button>
               <Card.Header
                 style={{
@@ -99,19 +122,23 @@ const PatientList = ({ doctors, toggle, data, setData }) => {
                     {reason}
                   </span>
                 </Card.Title>
-                <div className="buttons d-flex justify-content-center w-75">
-                  <Button variant="info" className="text-center me-2">
+                <div className="buttons d-flex justify-content-center">
+                  <Button
+                    style={{ backgroundColor: "#3da4f0" }}
+                    className="text-center btn-update"
+                  >
                     Update
                   </Button>
                   <Button
                     style={{
                       backgroundColor: isCompleted ? "green" : "orange",
                       border: "none",
+                      color: isCompleted ? "white" : "black",
                     }}
-                    className="text-center"
+                    className="text-center btn-status"
                     onClick={() => handleIsCompleted(id)}
                   >
-                    {isCompleted ? "Done" : "Pending"}
+                    Status : {isCompleted ? "Completed" : "Pending"}
                   </Button>
                 </div>
               </Card.Body>

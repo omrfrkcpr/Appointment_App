@@ -1,0 +1,20 @@
+.img-container {
+  text-align: center !important;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(
+    to right,
+    rgba(13, 142, 237, 0.8) 40%,
+    transparent 50%,
+    rgba(13, 142, 237, 0.8) 60%
+  );
+  height: 100px;
+  position: relative;
+}
+
+.logo {
+  position: absolute;
+  top: 0;
+}

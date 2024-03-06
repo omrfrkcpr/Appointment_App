@@ -64,7 +64,7 @@ const PatientList = ({ doctors, toggle, data, setData }) => {
                 <Card.Title>{doctor}</Card.Title>
                 <Card.Text>{department}</Card.Text>
                 <Button
-                  onClick={toggle}
+                  onClick={() => toggle(doctor)}
                   style={{ backgroundColor: "#3da4f0" }}
                   className="btn-appointments"
                 >

@@ -9,7 +9,7 @@ import drWulf from "../assets/Dr_Wulf-Gabler.png";
 
 const doctors = [
   {
-    id: 1,
+    idDoctor: 1,
     doctor: "Prof. Akari Yoshino",
     department: "Cardiology",
     resume:
@@ -17,7 +17,7 @@ const doctors = [
     image: drAkari,
   },
   {
-    id: 2,
+    idDoctor: 2,
     doctor: "Dr. Alena Mangold",
     department: "Neurology",
     resume:
@@ -25,7 +25,7 @@ const doctors = [
     image: drAlena,
   },
   {
-    id: 3,
+    idDoctor: 3,
     doctor: "Dr. Lian Kurzmann",
     department: "Orthopedics",
     resume:
@@ -33,7 +33,7 @@ const doctors = [
     image: drLian,
   },
   {
-    id: 4,
+    idDoctor: 4,
     doctor: "Prof. Dr. Benjamin Daley",
     department: "Oncology",
     resume:
@@ -41,7 +41,7 @@ const doctors = [
     image: drBenjamin,
   },
   {
-    id: 5,
+    idDoctor: 5,
     doctor: "MD. Eva Manz",
     department: "Pediatrics",
     resume:
@@ -49,15 +49,15 @@ const doctors = [
     image: drEva,
   },
   {
-    id: 6,
-    doctor: "Prof. Dr. Theodor MacClellan",
+    idDoctor: 6,
+    doctor: "Prof. Dr. Theodor Jackson",
     department: "Dermatology",
     resume:
       "Prof. Dr. Theodor MacClellan is a board-certified dermatologist known for his expertise in diagnosing and treating skin conditions. He graduated from Harvard Medical School in 1995 and completed his dermatology residency at Massachusetts General Hospital. Dr. MacClellan has a keen interest in cosmetic dermatology and offers a wide range of aesthetic procedures, including Botox injections, dermal fillers, and laser treatments. He is committed to providing personalized care and helping his patients achieve healthy and radiant skin.",
     image: drTheodor,
   },
   {
-    id: 7,
+    idDoctor: 7,
     doctor: "Dr. Nari Chung",
     department: "Gastroenterology",
     resume:
@@ -65,7 +65,7 @@ const doctors = [
     image: drNari,
   },
   {
-    id: 8,
+    idDoctor: 8,
     doctor: "Ass. Prof. Dr. Wulf Gabler",
     department: "Urology",
     resume:

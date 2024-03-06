@@ -1,0 +1,51 @@
+.title {
+  margin: 5rem auto 0;
+  width: 95%;
+  text-align: center;
+}
+
+/* ---------------------------------- */
+/*            doctors list            */
+/* ---------------------------------- */
+.cards {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  overflow: auto; /* Yatay kaydırma çubuğunu ekleyeceğiz */
+  height: 450px;
+  width: 95%;
+  flex-wrap: nowrap;
+  padding: 0 1rem;
+  margin: 2rem auto !important;
+  background-color: #3da5f06e;
+}
+
+.cards::-webkit-scrollbar {
+  width: 5px; /* Kaydırma çubuğunun genişliği */
+  height: 10px;
+}
+
+.cards::-webkit-scrollbar-thumb {
+  background-color: #3da4f0; /* Kaydırma kolu rengi */
+  border-radius: 5px; /* Kaydırma kolunun köşe yarıçapı */
+}
+
+.cards::-webkit-scrollbar-thumb:hover {
+  background-color: #1e7ac8; /* Fare üzerine gelindiğinde kaydırma kolu rengi */
+}
+
+.card {
+  min-width: 300px; /* Card'ların minimum genişliğini belirleyin */
+  height: 430px;
+  flex-shrink: 0; /* Card'lar küçülmeyecek */
+  margin-right: 10px; /* İstediğiniz boşluk */
+  padding: 1rem;
+}
+
+/* ---------------------------------- */
+/*            Appointments            */
+/* ---------------------------------- */
+
+.buttons {
+  margin: 1rem auto 0;
+}

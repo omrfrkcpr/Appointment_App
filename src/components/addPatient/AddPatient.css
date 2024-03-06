@@ -1,0 +1,141 @@
+.add-patient {
+  padding: 1rem;
+  position: relative;
+}
+
+.add-patient > .back-btn {
+  position: absolute;
+  top: -5rem;
+  left: 0;
+  padding: 0.7rem 1.5rem;
+  width: 200px;
+  color: #3ea5f1;
+  font-weight: bolder;
+  text-decoration: underline;
+}
+
+.add-patient > .back-btn:hover {
+  color: #0161a5;
+}
+
+.add-patient > .card-doctor {
+  display: flex !important;
+  flex-direction: row !important;
+  max-width: 1200px;
+  height: auto;
+  margin: 0 auto;
+  max-height: 430px;
+  width: auto !important;
+}
+
+.card-img {
+  width: 300px;
+}
+
+.appointment-management {
+  max-width: 2500px;
+  margin: auto;
+  height: auto;
+}
+
+.form-control {
+  height: 320px;
+  padding: 2rem;
+  line-height: 1.5rem;
+}
+
+.form-control label {
+  color: rgba(128, 0, 128, 0.597);
+  font-weight: bolder;
+  margin-bottom: 0.3rem;
+}
+
+.submit-btn {
+  border: none !important;
+  width: 80px;
+  background-color: #3da5f06e;
+  padding: 0.5rem 0;
+  border-radius: 10px;
+  margin: 1rem;
+}
+
+.submit-btn:hover {
+  background-color: #0161a5;
+  color: white;
+  transition-duration: 0.5s;
+}
+
+.doc-patients {
+  background-color: #3da5f06e;
+  width: 660px;
+  margin: auto;
+  max-width: 2850px;
+  height: auto;
+  max-height: 620px;
+  overflow: auto;
+}
+
+.doc-patients::-webkit-scrollbar {
+  width: 8px;
+  border-radius: 10px;
+}
+
+.doc-patients::-webkit-scrollbar-track {
+  background: #a9c3d7;
+  border-radius: 10px;
+}
+
+.doc-patients::-webkit-scrollbar-thumb {
+  background: #3ea5f1;
+  border-radius: 10px;
+}
+
+.doc-patients::-webkit-scrollbar-thumb:hover {
+  background: #058ced;
+}
+
+#reason {
+  font-size: smaller !important;
+}
+
+@media only screen and (max-width: 768px) {
+  .appointment-management {
+    display: block !important;
+  }
+
+  .form-control {
+    width: 90% !important;
+    margin: 1rem auto 2rem;
+  }
+
+  .add-patient > .card-doctor {
+    display: flex !important;
+    margin: 0 2rem !important;
+    flex-direction: column !important;
+    text-align: center;
+    max-height: 600px;
+  }
+
+  .card-doctor > .card-img {
+    margin: auto;
+    width: 200px !important;
+    height: 200px !important;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .appointment-management {
+    display: block !important;
+    text-align: center;
+  }
+
+  .form-control {
+    width: 90% !important;
+    margin: 0 auto 2rem;
+  }
+
+  .doc-patients {
+    width: 90% !important;
+    margin: 0 auto 2rem !important;
+  }
+}

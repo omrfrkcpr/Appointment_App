@@ -63,5 +63,13 @@ const Data = [
     doctor: "Ass. Prof. Dr. Wulf Gabler",
     reason: "Routine",
   },
+  {
+    id: 9,
+    patient: "İpek Bilir",
+    appointment: "Dec 12th at 2:30pm",
+    isCompleted: false,
+    doctor: "Prof. Dr. Benjamin Daley",
+    reason: "Check-up",
+  },
 ];
 export default Data;

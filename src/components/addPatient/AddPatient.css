@@ -23,9 +23,11 @@
   flex-direction: row !important;
   max-width: 1200px;
   height: auto;
+  justify-content: center;
+  align-items: center;
   margin: 0 auto;
-  max-height: 430px;
-  width: auto !important;
+  max-height: 630px !important;
+  /* width: auto !important; */
 }
 
 .card-img {
@@ -40,9 +42,10 @@
 }
 
 .form-control {
-  height: 350px;
+  height: auto;
   padding: 2rem;
   line-height: 1.5rem;
+  max-height: 375px;
 }
 
 .form-control label {
@@ -97,7 +100,31 @@
 
 #reason {
   font-size: smaller !important;
-  width: 300px;
+  width: 375px;
+}
+
+@media only screen and (max-width: 480px) {
+  .card-resume {
+    max-height: 300px !important;
+    padding: 0 1rem;
+    overflow: scroll !important;
+  }
+
+  #reason {
+    width: 180px !important;
+  }
+
+  .add-patient > .back-btn {
+    position: absolute;
+    top: -7rem;
+    left: 1rem;
+    padding: 0.2rem 0.5rem;
+    width: 150px;
+    color: #3ea5f1;
+    font-weight: bolder;
+    text-decoration: underline;
+    font-size: smaller;
+  }
 }
 
 @media only screen and (max-width: 768px) {
@@ -122,6 +149,10 @@
     margin: auto;
     width: 200px !important;
     height: 200px !important;
+  }
+
+  #reason {
+    width: 250px;
   }
 }
 

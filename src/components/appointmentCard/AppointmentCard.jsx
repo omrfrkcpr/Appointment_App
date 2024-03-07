@@ -1,6 +1,7 @@
 import React from "react";
 import { Card, Button } from "react-bootstrap";
 import { TiDelete } from "react-icons/ti";
+import "./AppointmentCard.css";
 
 const AppointmentCard = ({
   id,
@@ -17,7 +18,7 @@ const AppointmentCard = ({
   };
 
   return (
-    <Card style={{ width: "5rem", height: "18rem" }}>
+    <Card className="appointment-card">
       <button
         className="deleteBtn border-0 text-end w-25 ms-auto bg-white"
         style={{ width: "50px" }}

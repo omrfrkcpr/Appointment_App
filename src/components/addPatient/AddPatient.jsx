@@ -142,7 +142,7 @@ const AddPatient = ({ data, targetDoctor, setData, goBack }) => {
               {department}
             </span>
           </Card.Text>
-          <Card.Text>{resume}</Card.Text>
+          <Card.Text className="card-resume">{resume}</Card.Text>
         </Card.Body>
       </Card>
       <h4 className="mt-5 mb-4 text-center border-bottom mx-3 p-2 w-50 mx-auto">

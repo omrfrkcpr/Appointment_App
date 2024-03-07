@@ -1,18 +1,21 @@
 import React from "react";
+import uuid from "react-uuid";
 import { Button, Card, Row } from "react-bootstrap";
 import { TiDelete } from "react-icons/ti";
 import { PiArrowFatLinesLeftFill } from "react-icons/pi";
 import "./AddPatient.css";
+import { useState } from "react";
 
 const AddPatient = ({
-  targetData,
+  targetData = [],
   targetDoctor,
-  toggle,
   targetSetData,
-  doctors,
   goBack,
 }) => {
-  console.log({ targetData, targetDoctor, toggle });
+  // console.log({ targetData, targetDoctor, toggle });
+
+  const [newPatientName, setNewPatientName] = useState("");
+  const [newDate, setNewDate] = useState("");
 
   const { idDoctor, doctor, department, resume, image } = targetDoctor;
 
@@ -73,17 +76,13 @@ const AddPatient = ({
   };
 
   // create new appointment according to form and push into data.js
-  const handleCreate = (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
 
-    // Get form data
-    const fullname = document.getElementById("fullname").value;
-    const datetimeInput = document.getElementById("time").value;
-
     // Ensure datetimeInput is not empty
-    if (datetimeInput) {
+    if (newDate) {
       // Convert datetime to desired format
-      const formattedDateTime = new Date(datetimeInput);
+      const formattedDateTime = new Date(newDate);
       const options = {
         month: "short",
         day: "numeric",
@@ -99,26 +98,23 @@ const AddPatient = ({
 
       // Create a new appointment
       const newAppointment = {
-        id: targetData.length + 1,
-        patient: fullname,
+        id: uuid(),
+        patient: newPatientName,
         appointment: formattedDate,
         isCompleted: false,
         doctor: doctor,
         reason: reason,
       };
 
-      // // Update state with the new appointment
-      // targetSetData((prevData) => {
-      //   const updatedData = [...prevData, newAppointment];
-
-      //   // Update local storage
-      //   localStorage.setItem("appointments", JSON.stringify(updatedData));
-
-      //   return updatedData;
-      // });
-      // }
       // Add the new appointment to the data
-      targetSetData((prevData) => [...prevData, newAppointment]);
+      const updatedData = [...targetData, newAppointment];
+      targetSetData(updatedData);
+
+      // Update appointments in local storage
+      localStorage.setItem("appointments", JSON.stringify(updatedData));
+      console.log(targetData);
+      setNewPatientName("");
+      setNewDate("");
     }
   };
 
@@ -162,19 +158,31 @@ const AddPatient = ({
         All Appointments of {doctor}
       </h4>
       <div className="appointment-management d-flex justify-content-center ">
-        <form action="" className="form-control w-50 text-center">
+        <form onSubmit={handleSubmit} className="form-control w-50 text-center">
           <h5 className="text-center border-bottom w-75 m-auto">
             Create a new patient appointment
           </h5>
           <div className="name mt-2">
             <label htmlFor="fullname">Fullname</label>
             <br />
-            <input type="text" id="fullname" required />
+            <input
+              type="text"
+              id="fullname"
+              required
+              onChange={(e) => setNewPatientName(e.target.value)}
+              value={newPatientName}
+            />
           </div>
           <div className="time mt-2">
             <label htmlFor="time">Day & Time</label>
             <br />
-            <input type="datetime-local" id="time" required />
+            <input
+              type="datetime-local"
+              id="time"
+              required
+              onChange={(e) => setNewDate(e.target.value)}
+              value={newDate}
+            />
           </div>
           <div className="reason mt-2">
             <label htmlFor="reason">Reason</label>
@@ -196,11 +204,7 @@ const AddPatient = ({
             </select>
           </div>
           <div className="submit text-center">
-            <button
-              type="submit"
-              className="submit-btn"
-              onClick={(e) => handleCreate(e)}
-            >
+            <button type="submit" className="submit-btn">
               Create
             </button>
           </div>

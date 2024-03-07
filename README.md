@@ -38,7 +38,6 @@ Project aims to create a Hospital Appointment App.
 ```
 Appointment App(folder)
 |
-├── appointment-app.gif
 ├── public
 |     ├── index.html
 │     └── manifest.json
@@ -67,6 +66,7 @@ Appointment App(folder)
 │    └── index.js
 │
 ├── .gitignore
+├── appointment-app.gif
 ├── LICENSE
 ├── package.lock.json
 ├── package.json

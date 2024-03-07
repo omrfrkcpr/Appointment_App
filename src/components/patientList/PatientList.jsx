@@ -140,12 +140,12 @@ const PatientList = ({ doctors, toggle, data, setData }) => {
                   </span>
                 </Card.Title>
                 <div className="buttons d-flex justify-content-center">
-                  <Button
+                  {/* <Button
                     style={{ backgroundColor: "#3da4f0" }}
                     className="text-center btn-update"
                   >
                     Update
-                  </Button>
+                  </Button> */}
                   <Button
                     style={{
                       backgroundColor: isCompleted ? "green" : "orange",

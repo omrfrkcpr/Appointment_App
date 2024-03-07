@@ -46,6 +46,7 @@
   width: 95%;
   margin: auto;
   max-width: 2850px;
+  height: auto !important;
 }
 
 .buttons {

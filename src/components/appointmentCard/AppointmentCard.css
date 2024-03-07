@@ -1,18 +1,9 @@
 .appointment-card {
-  width: 1rem !important;
-  margin-top: 0.3rem;
-  margin-left: 0.5rem;
+  width: 100px !important;
+  margin: 0.3rem auto 0.3rem !important;
   display: flex;
   justify-content: center;
   align-self: center;
-  height: auto;
-  overflow: hidden;
-}
-
-@media only screen and (max-width: 430px) {
-  .appointment-card {
-    width: auto !important;
-    padding: 0;
-    overflow: hidden;
-  }
+  max-height: 300px !important ;
+  overflow: auto;
 }

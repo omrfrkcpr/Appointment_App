@@ -25,9 +25,8 @@
   height: auto;
   justify-content: center;
   align-items: center;
-  margin: 0 auto;
+  margin: auto !important;
   max-height: 630px !important;
-  /* width: auto !important; */
 }
 
 .card-img {
@@ -139,7 +138,7 @@
 
   .add-patient > .card-doctor {
     display: flex !important;
-    margin: 0 2rem !important;
+    /* margin: 0 2rem !important; */
     flex-direction: column !important;
     text-align: center;
     max-height: 600px;

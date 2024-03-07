@@ -8,32 +8,20 @@ import Navbar from "../components/navbar/Navbar";
 const Home = () => {
   const [togglePage, setTogglePage] = useState(true);
   const [data, setData] = useState(
-    localStorage.setItem("appointments", JSON.stringify(initialData)) ||
-      initialData
+    JSON.parse(localStorage.getItem("appointments")) || initialData
   );
   const [doctors, setDoctors] = useState(initialDoctors);
   const [selectedDoctor, setSelectedDoctor] = useState(null);
-  // const [selectedData, setSelectedData] = useState(null);
 
   const toggleComponent = (doctorName) => {
     setTogglePage(false);
-
     const selectedDoctor = doctors.find((doc) => doc.doctor === doctorName);
-    // setDoctors([selectedDoctor]);
     setSelectedDoctor(selectedDoctor);
-
-    // const selectedData = data.filter(
-    //   (patient) => patient.doctor === doctorName
-    // );
-    // setData(selectedData);
   };
 
   const goBack = () => {
     setTogglePage(true);
     setDoctors(initialDoctors);
-    // const appointmentsFromStorage =
-    //   JSON.parse(localStorage.getItem("appointments")) || initialData;
-    // setData(appointmentsFromStorage);
   };
 
   return (

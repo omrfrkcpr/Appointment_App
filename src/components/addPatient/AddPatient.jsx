@@ -6,15 +6,11 @@ import { PiArrowFatLinesLeftFill } from "react-icons/pi";
 import "./AddPatient.css";
 import { useState } from "react";
 
-const AddPatient = ({ data = [], targetDoctor, setData, goBack }) => {
+const AddPatient = ({ data, targetDoctor, setData, goBack }) => {
   // console.log({ data, targetDoctor, toggle });
 
   const [newPatientName, setNewPatientName] = useState("");
   const [newDate, setNewDate] = useState("");
-
-  // const targetData = data.map((a) => a.doctor === targetDoctor.doctor);
-
-  // const { id, patient, appointment, isCompleted, reason } = targetData;
 
   const { idDoctor, doctor, department, resume, image } = targetDoctor;
 
@@ -111,7 +107,7 @@ const AddPatient = ({ data = [], targetDoctor, setData, goBack }) => {
 
       // Update appointments in local storage
       localStorage.setItem("appointments", JSON.stringify(updatedData));
-      console.log(data);
+
       setNewPatientName("");
       setNewDate("");
     }

@@ -25,3 +25,35 @@
   text-align: center;
   color: red;
 }
+
+@media only screen and (max-width: 550px) {
+  .img-container {
+    height: 75px;
+  }
+
+  .logo {
+    height: 120px;
+    top: 10px;
+  }
+}
+
+@media only screen and (max-width: 390px) {
+  .img-container {
+    height: 60px;
+  }
+
+  .logo {
+    height: 100px;
+    top: 5px;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  .img-container {
+    height: 50px;
+  }
+
+  .logo {
+    height: 80px;
+  }
+}

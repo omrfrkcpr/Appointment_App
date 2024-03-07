@@ -1,7 +1,7 @@
 const Data = [
   {
     id: 1,
-    patient: "Yavuz Selim",
+    patient: "Bobbie Martel",
     appointment: "Dec 12th at 2:30pm",
     isCompleted: false,
     doctor: "Prof. Akari Yoshino",
@@ -9,7 +9,7 @@ const Data = [
   },
   {
     id: 2,
-    patient: "Mihrimah Sultan",
+    patient: "Kristie Keegan",
     appointment: "Dec 13th at 1:30pm",
     isCompleted: true,
     doctor: "Dr. Alena Mangold",
@@ -17,7 +17,7 @@ const Data = [
   },
   {
     id: 3,
-    patient: "Fatih Mehmet",
+    patient: "Erik Neumann",
     appointment: "Dec 14th at 3:00pm",
     isCompleted: false,
     doctor: "Dr. Lian Kurzmann",
@@ -25,7 +25,7 @@ const Data = [
   },
   {
     id: 4,
-    patient: "İpek Bilir",
+    patient: "Boyd Regenbogen",
     appointment: "Dec 12th at 2:30pm",
     isCompleted: false,
     doctor: "Prof. Dr. Benjamin Daley",
@@ -33,7 +33,7 @@ const Data = [
   },
   {
     id: 5,
-    patient: "Haluk Yilmaz",
+    patient: "Darla Mueller",
     appointment: "Dec 13th at 1:30pm",
     isCompleted: true,
     doctor: "MD. Eva Manz",
@@ -41,7 +41,7 @@ const Data = [
   },
   {
     id: 6,
-    patient: "Ayşe Güler",
+    patient: "Dot Kuntz",
     appointment: "Dec 14th at 3:00pm",
     isCompleted: false,
     doctor: "Prof. Dr. Theodor Jackson",
@@ -49,7 +49,7 @@ const Data = [
   },
   {
     id: 7,
-    patient: "Ayşe Güler",
+    patient: "Ella Chester",
     appointment: "Dec 14th at 3:00pm",
     isCompleted: false,
     doctor: "Dr. Nari Chung",
@@ -57,7 +57,7 @@ const Data = [
   },
   {
     id: 8,
-    patient: "Ayşe Güler",
+    patient: "Elisa Daniel",
     appointment: "Dec 14th at 3:00pm",
     isCompleted: false,
     doctor: "Ass. Prof. Dr. Wulf Gabler",
@@ -65,7 +65,7 @@ const Data = [
   },
   {
     id: 9,
-    patient: "İpek Bilir",
+    patient: "Timmy Donaldson",
     appointment: "Dec 12th at 2:30pm",
     isCompleted: false,
     doctor: "Prof. Dr. Benjamin Daley",

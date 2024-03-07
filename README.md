@@ -38,6 +38,7 @@ Project aims to create a Hospital Appointment App.
 ```
 Appointment App(folder)
 |
+├── appointment-app.gif
 ├── public
 |     ├── index.html
 │     └── manifest.json
@@ -47,18 +48,24 @@ Appointment App(folder)
 │    │       ├── addPatient
 │    │       │        ├── AddPatient.css
 │    │       │        └── AddPatient.jsx
-|    |       |
+│    │       ├── appointmentCard
+│    │       │        ├── AppointmentCard.css
+|    |       |        └── AppointmentCard.jsx
+│    │       ├── navbar
+│    │       │        ├── Navbar.css
+|    |       |        └── Navbar.jsx
 │    │       └── patientList
 │    │                ├── PatientList.css
 |    |                └── PatientList.jsx
 │    ├── helper
 │    │       ├── data.js
+│    │       └── doctors.js
+│    ├── pages
 │    │       └── Home.jsx
-│    │
-│    ├── App.css
 │    ├── App.js
 │    ├── index.css
 │    └── index.js
+│
 ├── .gitignore
 ├── LICENSE
 ├── package.lock.json
@@ -91,6 +98,7 @@ Build a Hospital Appointment App using ReactJS.
 ## Additional Data
 
 - [data.js](./helpers/data.js)
+- [doctors.js](./helpers/doctors.js)
 - [assets](../src/assets)
 
 <p align="center"><strong>&#9786; Happy Coding &#9997;</strong></p>

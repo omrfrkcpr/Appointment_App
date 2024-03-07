@@ -1,5 +1,7 @@
 # Appointment App
 
+https://medical-center-appointments.netlify.app/
+
 ## Description
 
 Project aims to create a Hospital Appointment App.
@@ -97,8 +99,8 @@ Build a Hospital Appointment App using ReactJS.
 
 ## Additional Data
 
-- [data.js](./helpers/data.js)
-- [doctors.js](./helpers/doctors.js)
-- [assets](../src/assets)
+- [data.js](src/helpers/data.js)
+- [doctors.js](src/helpers/doctors.js)
+- [assets](src/assets)
 
 <p align="center"><strong>&#9786; Happy Coding &#9997;</strong></p>

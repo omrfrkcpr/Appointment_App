@@ -22,10 +22,10 @@ const Home = () => {
     // setDoctors([selectedDoctor]);
     setSelectedDoctor(selectedDoctor);
 
-    const selectedData = data.filter(
-      (patient) => patient.doctor === doctorName
-    );
-    setData(selectedData);
+    // const selectedData = data.filter(
+    //   (patient) => patient.doctor === doctorName
+    // );
+    // setData(selectedData);
   };
 
   const goBack = () => {
@@ -48,8 +48,8 @@ const Home = () => {
         />
       ) : (
         <AddPatient
-          targetData={data}
-          targetSetData={setData}
+          data={data}
+          setData={setData}
           targetDoctor={selectedDoctor}
           goBack={goBack}
         />

@@ -6,22 +6,21 @@ import { PiArrowFatLinesLeftFill } from "react-icons/pi";
 import "./AddPatient.css";
 import { useState } from "react";
 
-const AddPatient = ({
-  targetData = [],
-  targetDoctor,
-  targetSetData,
-  goBack,
-}) => {
-  // console.log({ targetData, targetDoctor, toggle });
+const AddPatient = ({ data = [], targetDoctor, setData, goBack }) => {
+  // console.log({ data, targetDoctor, toggle });
 
   const [newPatientName, setNewPatientName] = useState("");
   const [newDate, setNewDate] = useState("");
+
+  // const targetData = data.map((a) => a.doctor === targetDoctor.doctor);
+
+  // const { id, patient, appointment, isCompleted, reason } = targetData;
 
   const { idDoctor, doctor, department, resume, image } = targetDoctor;
 
   // Toggle appointment status
   const handleIsCompleted = (id) => {
-    targetSetData((prevData) => {
+    setData((prevData) => {
       const updatedData = prevData.map((appointment) => {
         if (appointment.id === id) {
           return { ...appointment, isCompleted: !appointment.isCompleted };
@@ -43,7 +42,7 @@ const AddPatient = ({
         `${patient}'s Appointment will be permanently deleted. Are you sure?`
       )
     ) {
-      targetSetData((prevData) => {
+      setData((prevData) => {
         // Filtreleme işlemi ile silinecek randevuyu hariç tut
         const updatedData = prevData.filter(
           (appointment) => appointment.id !== id
@@ -107,12 +106,12 @@ const AddPatient = ({
       };
 
       // Add the new appointment to the data
-      const updatedData = [...targetData, newAppointment];
-      targetSetData(updatedData);
+      const updatedData = [...data, newAppointment];
+      setData(updatedData);
 
       // Update appointments in local storage
       localStorage.setItem("appointments", JSON.stringify(updatedData));
-      console.log(targetData);
+      console.log(data);
       setNewPatientName("");
       setNewDate("");
     }
@@ -210,79 +209,91 @@ const AddPatient = ({
           </div>
         </form>
         <Row className="doc-patients text-center mb-5 ms-4 justify-content-center align-items-center g-3 pb-3 w-50">
-          {Array.isArray(targetData) && targetData.length > 0 ? (
-            targetData.map((patients) => {
-              const { id, patient, appointment, isCompleted, doctor, reason } =
-                patients;
-              return (
-                <Card key={id} style={{ width: "5rem", height: "18rem" }}>
-                  <button
-                    className="deleteBtn border-0 text-end w-25 ms-auto bg-white"
-                    style={{ width: "50px" }}
-                    onClick={() => handleDelete(id, patient)}
-                  >
-                    <TiDelete style={{ color: "red", fontSize: "25px" }} />
-                  </button>
-                  <Card.Header
-                    style={{
-                      textDecoration: toggleTextDecoration(isCompleted),
-                      width: "70%",
-                      margin: "auto",
-                    }}
-                  >
-                    {patient}
-                  </Card.Header>
-                  <Card.Body>
-                    <Card.Text
+          {Array.isArray(data) && data.length > 0 ? (
+            data
+              .filter((a) => a.doctor === doctor)
+              .map((patients) => {
+                const {
+                  id,
+                  patient,
+                  appointment,
+                  isCompleted,
+                  doctor,
+                  reason,
+                } = patients;
+                return (
+                  <Card key={id} style={{ width: "5rem", height: "18rem" }}>
+                    <button
+                      className="deleteBtn border-0 text-end w-25 ms-auto bg-white"
+                      style={{ width: "50px" }}
+                      onClick={() => handleDelete(id, patient)}
+                    >
+                      <TiDelete style={{ color: "red", fontSize: "25px" }} />
+                    </button>
+                    <Card.Header
                       style={{
                         textDecoration: toggleTextDecoration(isCompleted),
+                        width: "70%",
+                        margin: "auto",
                       }}
                     >
-                      {doctor}
-                    </Card.Text>
-                    <Card.Title
-                      style={{
-                        textDecoration: toggleTextDecoration(isCompleted),
-                      }}
-                    >
-                      Date :{" "}
-                      <span style={{ color: isCompleted ? "green" : "orange" }}>
-                        {appointment}
-                      </span>
-                    </Card.Title>
-                    <Card.Title
-                      style={{
-                        textDecoration: toggleTextDecoration(isCompleted),
-                      }}
-                    >
-                      Reason:{" "}
-                      <span style={{ color: isCompleted ? "green" : "orange" }}>
-                        {reason}
-                      </span>
-                    </Card.Title>
-                    <div className="buttons d-flex justify-content-center">
-                      <Button
-                        style={{ backgroundColor: "#3da4f0" }}
-                        className="text-center btn-update"
-                      >
-                        Update
-                      </Button>
-                      <Button
+                      {patient}
+                    </Card.Header>
+                    <Card.Body>
+                      <Card.Text
                         style={{
-                          backgroundColor: isCompleted ? "green" : "orange",
-                          border: "none",
-                          color: isCompleted ? "white" : "black",
+                          textDecoration: toggleTextDecoration(isCompleted),
                         }}
-                        className="text-center btn-status"
-                        onClick={() => handleIsCompleted(id)}
                       >
-                        Status : {isCompleted ? "Completed" : "Pending"}
-                      </Button>
-                    </div>
-                  </Card.Body>
-                </Card>
-              );
-            })
+                        {doctor}
+                      </Card.Text>
+                      <Card.Title
+                        style={{
+                          textDecoration: toggleTextDecoration(isCompleted),
+                        }}
+                      >
+                        Date :{" "}
+                        <span
+                          style={{ color: isCompleted ? "green" : "orange" }}
+                        >
+                          {appointment}
+                        </span>
+                      </Card.Title>
+                      <Card.Title
+                        style={{
+                          textDecoration: toggleTextDecoration(isCompleted),
+                        }}
+                      >
+                        Reason:{" "}
+                        <span
+                          style={{ color: isCompleted ? "green" : "orange" }}
+                        >
+                          {reason}
+                        </span>
+                      </Card.Title>
+                      <div className="buttons d-flex justify-content-center">
+                        <Button
+                          style={{ backgroundColor: "#3da4f0" }}
+                          className="text-center btn-update"
+                        >
+                          Update
+                        </Button>
+                        <Button
+                          style={{
+                            backgroundColor: isCompleted ? "green" : "orange",
+                            border: "none",
+                            color: isCompleted ? "white" : "black",
+                          }}
+                          className="text-center btn-status"
+                          onClick={() => handleIsCompleted(id)}
+                        >
+                          Status : {isCompleted ? "Completed" : "Pending"}
+                        </Button>
+                      </div>
+                    </Card.Body>
+                  </Card>
+                );
+              })
           ) : (
             <p className="no-item">No appointments found</p>
           )}

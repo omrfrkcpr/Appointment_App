@@ -15,7 +15,7 @@ Project aims to create a Hospital Appointment App.
 1. **View Doctors:**
 
    - Task-1 = Create a page to display the list of doctors, including their name, specialty, and available appointment hours.
-   - Task-2 = Fetch doctor information from Data.js and pass it to the doctor list page.
+   - Task-2 = Filter doctor information from Data.js and pass it to the doctor list page.
 
 2. **View Appointments:**
 
@@ -76,6 +76,8 @@ Appointment App(folder)
 ```
 
 ## Expected Outcome
+
+![appointment-app](https://github.com/omrfrkcpr/Appointment_App/assets/77440899/0b5ac3e1-9909-4812-9e21-88ffe911a7ad)
 
 ## Objective
 

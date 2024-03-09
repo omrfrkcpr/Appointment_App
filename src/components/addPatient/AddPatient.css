@@ -104,9 +104,28 @@
 
 @media only screen and (max-width: 480px) {
   .card-resume {
-    max-height: 300px !important;
+    max-height: 280px !important;
     padding: 0 1rem;
-    overflow: scroll !important;
+    overflow-y: scroll !important;
+  }
+
+  .card-resume::-webkit-scrollbar {
+    width: 8px;
+    border-radius: 10px;
+  }
+
+  .card-resume::-webkit-scrollbar-track {
+    background: #a9c3d7;
+    border-radius: 10px;
+  }
+
+  .card-resume::-webkit-scrollbar-thumb {
+    background: #3ea5f1;
+    border-radius: 10px;
+  }
+
+  .card-resume::-webkit-scrollbar-thumb:hover {
+    background: #058ced;
   }
 
   #reason {

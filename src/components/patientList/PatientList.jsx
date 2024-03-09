@@ -22,6 +22,12 @@ const PatientList = ({ doctors, toggle, data, setData }) => {
     });
   };
 
+  window.onload = function () {
+    let container = document.getElementById("cards");
+
+    container.scrollLeft = (container.scrollWidth - container.clientWidth) / 2;
+  };
+
   // Delete appointment from database
   const handleDelete = (id, patient) => {
     if (
@@ -62,7 +68,7 @@ const PatientList = ({ doctors, toggle, data, setData }) => {
       <h4 className="mt-5 mb-4 text-center border-bottom mx-3 p-2">
         All Doctors
       </h4>
-      <Row className="text-center cards m-auto">
+      <Row className="text-center cards m-auto" id="cards">
         {doctors &&
           doctors.map((doc) => {
             const { idDoctor, doctor, department, image } = doc;

@@ -5,7 +5,7 @@
   display: flex;
   align-items: center;
   justify-content: start;
-  overflow: auto; /* Yatay kaydırma çubuğunu ekleyeceğiz */
+  overflow: auto;
   height: 450px;
   width: 95%;
   flex-wrap: nowrap;
@@ -16,24 +16,24 @@
 }
 
 .cards::-webkit-scrollbar {
-  width: 5px; /* Kaydırma çubuğunun genişliği */
+  width: 5px;
   height: 10px;
 }
 
 .cards::-webkit-scrollbar-thumb {
-  background-color: #3da4f0; /* Kaydırma kolu rengi */
-  border-radius: 5px; /* Kaydırma kolunun köşe yarıçapı */
+  background-color: #3da4f0;
+  border-radius: 5px;
 }
 
 .cards::-webkit-scrollbar-thumb:hover {
-  background-color: #1e7ac8; /* Fare üzerine gelindiğinde kaydırma kolu rengi */
+  background-color: #1e7ac8;
 }
 
 .card {
-  min-width: 300px; /* Card'ların minimum genişliğini belirleyin */
+  min-width: 300px;
   height: 430px;
-  flex-shrink: 0; /* Card'lar küçülmeyecek */
-  margin-right: 10px; /* İstediğiniz boşluk */
+  flex-shrink: 0;
+  margin-right: 10px;
   padding: 1rem;
 }
 

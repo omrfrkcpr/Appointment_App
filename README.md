@@ -6,6 +6,10 @@ https://medical-center-appointments.netlify.app/
 
 Project aims to create a Hospital Appointment App.
 
+## Outcome
+
+![appointment-app](https://github.com/omrfrkcpr/Appointment_App/assets/77440899/0b5ac3e1-9909-4812-9e21-88ffe911a7ad)
+
 ## Project Planning & Management
 
 **Epic User Story:** Build an interactive two-pages Appointment Application
@@ -74,10 +78,6 @@ Appointment App(folder)
 ├── package.json
 └── README.md
 ```
-
-## Expected Outcome
-
-![appointment-app](https://github.com/omrfrkcpr/Appointment_App/assets/77440899/0b5ac3e1-9909-4812-9e21-88ffe911a7ad)
 
 ## Objective
 

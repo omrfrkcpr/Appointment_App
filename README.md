@@ -1,10 +1,10 @@
-# Appointment App
+# Appointment App ©️
 
 💻 https://medical-center-appointments.netlify.app/
 
-## Description
+## <u>Description</u>
 
-Project aims to create a Hospital Appointment App.
+This project aims to develop an interactive Appointment Application. The first page displays a list of doctors with their names, specialties, and available appointment hours, while the second page shows the selected doctor's appointment list with dates, times, and patient names. Additionally, there's a form page for adding new patients to the selected doctor's appointments. The application includes data management functions for easy data manipulation and is designed to be responsive for seamless user experience across devices.
 
 ## Outcome 🎦
 
@@ -12,7 +12,7 @@ Project aims to create a Hospital Appointment App.
 
 ## Project Planning & Management
 
-**Epic User Story:** Build an interactive two-pages Appointment Application 🎖️
+**Epic User Story:** Build an interactive Appointment Application 🎖️
 
 **User Stories:**
 
@@ -84,7 +84,7 @@ Appointment App(folder)
 
 Build a Hospital Appointment App using ReactJS.
 
-### At the end of the project, following topics are to be covered;
+### At the end of the project, following topics are to be covered; 🎯
 
 - HTML
 
@@ -94,7 +94,7 @@ Build a Hospital Appointment App using ReactJS.
 
 - ReactJS
 
-### At the end of the project, students will be able to;
+### At the end of the project, students will be able to; 💪
 
 - improve coding skills within HTML & CSS & JS & ReactJS.
 
@@ -112,6 +112,6 @@ Your insights and contributions greatly enrich my projects! Whether you're burst
 
 ## LICENSE 🪪
 
-This repository is licensed under the Apache Version 2.0 License. See the GPL licence file for details. For more information please visit this page http://www.apache.org/licenses/.
+This repository is licensed under the Apache Version 2.0 License. See the GPL licence file for details. For more information please visit this page [Apache License](http://www.apache.org/licenses/).
 
 <p align="center"><strong>&#9786; Happy Coding &#9997;</strong></p>

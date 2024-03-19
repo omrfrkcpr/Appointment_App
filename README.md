@@ -1,45 +1,46 @@
 # Appointment App
 
-https://medical-center-appointments.netlify.app/
+💻 https://medical-center-appointments.netlify.app/
 
 ## Description
 
 Project aims to create a Hospital Appointment App.
 
-## Outcome
+## Outcome 🎦
 
 ![appointment-app](https://github.com/omrfrkcpr/Appointment_App/assets/77440899/0b5ac3e1-9909-4812-9e21-88ffe911a7ad)
 
 ## Project Planning & Management
 
-**Epic User Story:** Build an interactive two-pages Appointment Application
+**Epic User Story:** Build an interactive two-pages Appointment Application 🎖️
 
 **User Stories:**
 
-1. **View Doctors:**
+1️⃣ **View Doctors:**
 
-   - Task-1 = Create a page to display the list of doctors, including their name, specialty, and available appointment hours.
-   - Task-2 = Filter doctor information from Data.js and pass it to the doctor list page.
+- 🥇 Create a page to display the list of doctors, including their name, specialty, and available appointment hours.
+- 🥈 Filter doctor information from Data.js and pass it to the doctor list page.
 
-2. **View Appointments:**
+2️⃣ **View Appointments:**
 
-   - Task-1 = Develop a page to display the selected doctor's appointment list, showing appointment date, time, and patient name.
-   - Task-2 = Retrieve appointment information for the selected doctor from Data.js and display it on the appointment list page.
+- 🥇 Develop a page to display the selected doctor's appointment list, showing appointment date, time, and patient name.
+- 🥈 Retrieve appointment information for the selected doctor from Data.js and display it on the appointment list page.
 
-3. **Add Patient:**
+3️⃣ **Add Patient:**
 
-   - Task-1 = Design a form page to add a new patient to a selected doctor's appointments, with fields for patient name, date, and time selection.
-   - Task-2 = Generate a new appointment using the information from the add patient form and add it to the appointment list of the selected doctor.
+- 🥇 Design a form page to add a new patient to a selected doctor's appointments, with fields for patient name, date, and time selection.
+- 🥈 Generate a new appointment using the information from the add patient form and add it to the appointment list of the selected doctor.
 
-4. **Data Management:**
-   - Task-1 = Develop functions to update data, such as adding a new appointment, and set up functions to access Data.js and local storage.
-   - Task-2 = Implement functions to update both Data.js and local storage when a new appointment is added.
+4️⃣ **Data Management:**
 
-**Additional Requirement:**
+- 🥇 Develop functions to update data, such as adding a new appointment, and set up functions to access Data.js and local storage.
+- 🥈 Implement functions to update both Data.js and local storage when a new appointment is added.
+
+**Additional Requirement:** 💥
 
 - The application should have a responsive design.
 
-## Project Skeleton
+## Project Skeleton 🩻
 
 ```
 Appointment App(folder)
@@ -99,10 +100,18 @@ Build a Hospital Appointment App using ReactJS.
 
 - use git commands (push, pull, commit, add etc.) and Github as Version Control System.
 
-## Additional Data
+## Additional Data 📦
 
 - [data.js](src/helpers/data.js)
 - [doctors.js](src/helpers/doctors.js)
 - [assets](src/assets)
+
+## Contributing 🤝
+
+Your insights and contributions greatly enrich my projects! Whether you're bursting with fresh project concepts or have ideas to enhance existing ones, your input is invaluable. Feel free to open an issue to initiate a dialogue about your thoughts, or submit a pull request with your proposed modifications. Every contribution plays a vital role in my growth and improvement, so thank you for being an integral part of my community!
+
+## LICENSE 🪪
+
+This repository is licensed under the Apache Version 2.0 License. See the GPL licence file for details. For more information please visit this page http://www.apache.org/licenses/.
 
 <p align="center"><strong>&#9786; Happy Coding &#9997;</strong></p>
